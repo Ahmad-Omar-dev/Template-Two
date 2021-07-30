@@ -1,0 +1,233 @@
+:root {
+    --first-color: #d0cfcd;
+    --second-color: #363d3b;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+ul {
+    list-style:none;
+    
+}
+.container {
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;    
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;    
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;    
+    }
+}
+
+/* Start Header */
+
+header {
+    width: 100%;
+    height: 75px;
+}
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    /* border-bottom: 2px solid white; */
+    position: relative;
+}
+header .container::after {
+    content:"";
+    width: calc(100% - 30px)    ;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    background-color:white;
+    z-index: -1;
+}
+/* .logo {
+    flex-basis: 50%;
+} */
+
+.logo h1 a {
+    text-decoration: none;
+    margin: 0;
+    color: var(--first-color);
+}
+nav {
+    /* flex-basis: 45%; */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+}
+header nav i.menu {
+    display: none;
+    color: white;
+    font-size: 21.5px;
+    margin-right: 30px;
+}
+@media (max-width: 768px) {
+    header nav i.menu {
+        display:block;
+    }
+    header nav ul {
+        justify-content: flex-start;
+        /* display: none; */
+        flex-direction: column;
+        background-color: #747f5a;
+        position: fixed;
+        width: 100vh;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        align-items: center;
+        text-align: center;
+    }
+    header nav ul li {
+        padding-bottom: 30px;
+    }
+    header nav ul li a {
+        padding: 0;
+        font-size: 30px;
+        
+    }
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 30px;
+
+}
+nav ul li {
+    width: 100%;
+    height: 100%;
+}
+nav ul li:hover {
+    border-bottom: 1px solid var(--second-color)
+}
+nav ul li a {
+    text-decoration: none;
+    color: #e7e7e7;
+    font-size: 17.5px;
+    font-weight: 600;
+    padding-bottom: 25.3px;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+    outline: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+
+nav ul li:nth-of-type(1) a {
+    color: var(--second-color);
+    border-bottom: 1px solid var(--second-color);
+}
+/* nav ul a:hover {
+    color: var(--second-color);
+    border-bottom: 1px solid var(--second-color);
+} */
+header nav i.search {
+    color: white;
+    font-size: 21.5px;
+    position: relative;
+}
+header nav i.search::after {
+    content: '';
+    width: 2px;
+    background-color: white;
+    height: 150%;
+    position: absolute;
+    left: -11px;
+    top: -25%;
+}
+.intro {
+    position: relative;
+    top: -75px;
+    height: 100vh;
+    width: 100%;
+    z-index: -3;
+}
+.intro img {
+    width: 100%;
+    height: 100vh;
+}
+.intro .arrows {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 95%;
+    transform: translateY(-50vh);
+    -webkit-transform: translateY(-50vh);
+    -moz-transform: translateY(-50vh);
+    -ms-transform: translateY(-50vh);
+    -o-transform: translateY(-50vh);
+}
+.intro .arrows i {
+    color:var(--first-color);
+}
+.intro .browse {
+    display: flex;
+    justify-content:center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translatex(-50%);
+
+}
+.intro .browse div {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--first-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+}
+.intro .browse div:nth-child(2) {
+    border: none;
+    background-color: var(--second-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
